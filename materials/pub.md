@@ -79,4 +79,4 @@ For a full list of publications, see [here](https://scholar.google.com.sg/citati
 
 *  __A Simple Provably Secure Key Exchange Scheme Based on the Learning with Errors Problem__ 
    *  _Jintai Ding, Xiang Xie, and Xiaodong Lin_
-   *  2021 [eprint](https://eprint.iacr.org/2012/688.pdf).
+   *  2012 [eprint](https://eprint.iacr.org/2012/688.pdf).
