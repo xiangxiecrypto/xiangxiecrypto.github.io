@@ -2,6 +2,8 @@
 layout: page
 title: Selected Publications
 ---
+For a full list of publications, see [here](https://scholar.google.com.sg/citations?hl=en&user=WWb0js4AAAAJ&view_op=list_works).
+
 * __Scalable Multi-Party Computation Protocols for Machine Learning in the Honest-Majority Setting__
   * _Fengrun Liu, Xiang Xie, and Yu Yu_
   * USENIX Security 2024.
