@@ -19,11 +19,11 @@ For a full list of publications, see [here](https://scholar.google.com.sg/citati
    *  _Chun Guo, Xiao Wang, Xiang Xie, and Yu Yu_
    *  ACM Transactions on Privacy and Security, 2023.
 
-*   __AntMan: interactive zero-knowledge proofs with sublinear communication__
+*   __AntMan: Interactive Zero-Knowledge Proofs with Sublinear Communication__
     *   _Chenkai Weng, Kang Yang, Zhaomin Yang, Xiang Xie, and Xiao Wang_
     *   ACM CCS 2022. [eprint](https://eprint.iacr.org/2022/566.pdf).
 
-*   __Cryptanalysis of Boyen’s attribute-based encryption scheme in TCC 2013__
+*   __Cryptanalysis of Boyen’s Attribute-Based Encryption Scheme in TCC 2013__
     *   _Shweta Agrawal, Rajarshi Biswas, Ryo Nishimaki, Keita Xagawa, Xiang Xie, and Shota Yamada_
     *   Designs, Codes and Cryptography 2022. [eprint](https://eprint.iacr.org/2021/505.pdf).
 
@@ -31,39 +31,39 @@ For a full list of publications, see [here](https://scholar.google.com.sg/citati
     *   _Yi Deng, Shunli Ma, Xinxuan Zhang, Hailong Wang, Xuyang Song, and Xiang Xie_
     *   ASIACRYPT 2021. [eprint](https://eprint.iacr.org/2022/297.pdf).
 
-*   __Efficient online-friendly two-party ECDSA signature__
+*   __Efficient Online-Friendly Two-Party ECDSA Signature__
     *   _Haiyang Xue, Man Ho Au, Xiang Xie, Tsz Hon Yuen, and Handong Cui_
     *   ACM CCS 2021. [eprint](https://eprint.iacr.org/2022/318.pdf).
 
-*   __Doubly efficient interactive proofs for general arithmetic circuits with linear prover time__
+*   __Doubly Efficient Interactive Proofs for General Arithmetic Circuits with Linear Prover Time__
     *   _Jiaheng Zhang, Tianyi Liu, Weijie Wang, Yinuo Zhang, Dawn Song, Xiang Xie, and Yupeng Zhang_
     *   ACM CCS 2021. [eprint](https://eprint.iacr.org/2020/1247.pdf).
 
-*   __ZkCNN: Zero knowledge proofs for convolutional neural network predictions and accuracy__
+*   __ZkCNN: Zero-Knowledge Proofs for Convolutional Neural Network Predictions and Accuracy__
     *   _Tianyi Liu, Xiang Xie, and Yupeng Zhang_
     *   ACM CCS 2021. [eprint](https://eprint.iacr.org/2021/673.pdf).
 
-*   __Compact zero-knowledge proofs for threshold ECDSA with trustless setup__
-    *   Tsz Hon Yuen, Handong Cui and, Xiang Xie
+*   __Compact Zero-Knowledge Proofs for Threshold ECDSA with Trustless Setup__
+    *   Tsz Hon Yuen, Handong Cui, and Xiang Xie
     *   PKC 2021. [eprint](https://eprint.iacr.org/2021/205.pdf).
 
-*   __Mystique: Efficient conversions for Zero-Knowledge proofs with applications to machine learning__
+*   __Mystique: Efficient Conversions for Zero-Knowledge Proofs with Applications to Machine Learning__
     *   _Chenkai Weng, Kang Yang, Xiang Xie, Jonathan Katz, and Xiao Wang_
     *   USENIX Security 2021. [eprint](https://eprint.iacr.org/2021/730.pdf).
 
 *   __LEAF: A Faster Secure Search Algorithm via Localization, Extraction, and Reconstruction__
-    *   _Rui Wen, Yu Yu, Xiang Xie and, Yang Zhang_
+    *   _Rui Wen, Yu Yu, Xiang Xie, and Yang Zhang_
     *   ACM CCS 2020. [link](https://yangzhangalmo.github.io/papers/CCS20-LEAF.pdf).
 
-*   __Structural lattice reduction: generalized worst-case to average-case reductions and homomorphic cryptosystems__
+*   __Structural Lattice Reduction: Generalized Worst-Case to Average-Case Reductions and Homomorphic Cryptosystems__
     *   _Nicolas Gama, Malika Izabachene, Phong Q Nguyen, and Xiang Xie_
     *   EUROCRYPT 2016. [eprint](https://eprint.iacr.org/2014/283.pdf).
 
-*   __Zero knowledge proofs from Ring-LWE__
+*   __Zero Knowledge Proofs from Ring-LWE__
     *   _Xiang Xie, Rui Xue, and Minqian Wang_
     *   CANS 2013.
 
-*  __Deterministic public key encryption and identity-based encryption from lattices in the auxiliary-input setting__
+*  __Deterministic Public Key Encryption and Identity-Based Encryption from Lattices in the Auxiliary-Input Setting__
    *  _Xiang Xie, Rui Xue, and Rui Zhang_
    *  SCN 2012 (Best Paper). [eprint](https://eprint.iacr.org/2012/463.pdf).
 
@@ -73,7 +73,7 @@ For a full list of publications, see [here](https://scholar.google.com.sg/citati
   * _Xiang Xie, Kang Yang, Xiao Wang, and Yu Yu_
   * 2023 [eprint](https://eprint.iacr.org/2023/964.pdf).
 
-*  __TOTA: fully homomorphic encryption with smaller parameters and stronger security__
+*  __TOTA: Fully Homomorphic Encryption with Smaller Parameters and Stronger Security__
    *  _Zhaomin Yang, Xiang Xie, Huajie Shen, Shiying Chen, and Jun Zhou_
    *  2021 [eprint](https://eprint.iacr.org/2021/1347.pdf).
 
