@@ -2,6 +2,18 @@
 layout: page
 title: Selected Publications
 ---
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
+
 For a full list of publications, see [here](https://scholar.google.com.sg/citations?hl=en&user=WWb0js4AAAAJ&view_op=list_works).
 
 * __Scalable Multi-Party Computation Protocols for Machine Learning in the Honest-Majority Setting__
