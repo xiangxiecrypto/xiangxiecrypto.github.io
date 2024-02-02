@@ -15,7 +15,9 @@ title: Selected Publications
 </head>
 
 For a full list of publications, see [here](https://scholar.google.com.sg/citations?hl=en&user=WWb0js4AAAAJ&view_op=list_works).
-
+* __Lightweight Authentication of Web Data via Garble-Then-Prove__
+  * _Xiang Xie, Kang Yang, Xiao Wang, and Yu Yu_
+  * USENIX Security 2024. [eprint](https://eprint.iacr.org/2023/964.pdf).
 * __Scalable Multi-Party Computation Protocols for Machine Learning in the Honest-Majority Setting__
   * _Fengrun Liu, Xiang Xie, and Yu Yu_
   * USENIX Security 2024.
@@ -81,10 +83,6 @@ For a full list of publications, see [here](https://scholar.google.com.sg/citati
 
 
 ## Preprint
-* __Lightweight Authentication of Web Data via Garble-Then-Prove__
-  * _Xiang Xie, Kang Yang, Xiao Wang, and Yu Yu_
-  * 2023 [eprint](https://eprint.iacr.org/2023/964.pdf).
-
 *  __TOTA: Fully Homomorphic Encryption with Smaller Parameters and Stronger Security__
    *  _Zhaomin Yang, Xiang Xie, Huajie Shen, Shiying Chen, and Jun Zhou_
    *  2021 [eprint](https://eprint.iacr.org/2021/1347.pdf).
