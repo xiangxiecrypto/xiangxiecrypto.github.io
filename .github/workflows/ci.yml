@@ -5,6 +5,9 @@ jobs:
     name: Build Jekyll
     runs-on: ubuntu-latest
     steps:
+      - name: update RubyGems
+        run: gem update --system
+        
       - uses: actions/checkout@v3
       - name: Build the site in the jekyll/builder container
         run: |
