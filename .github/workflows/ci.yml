@@ -14,18 +14,50 @@
 #           -e PAGES_REPO_NWO=${{ github.repository }} \
 #           jekyll/builder:$JEKYLL_VERSION /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
 
+# name: Beautiful Jekyll CI
+# on: [push, pull_request]
+# jobs:
+#   build:
+#     name: Build Jekyll
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+#       - uses: ruby/setup-ruby@v1
+#         with:
+#           ruby-version: '3.2'
+#       - name: Install dependencies
+#         run: bundle install && bundle exec appraisal install
+#       - name: Build site
+#         run: bundle exec appraisal jekyll build --future
+
 name: Beautiful Jekyll CI
+
 on: [push, pull_request]
+
 jobs:
   build:
     name: Build Jekyll
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'
+          ruby-version: '3.2'  # Adjust Ruby version if necessary
+
       - name: Install dependencies
-        run: bundle install && bundle exec appraisal install
+        run: |
+          bundle install
+          bundle exec appraisal install
+        env:
+          BUNDLE_PATH: vendor/bundle  # Use vendor/bundle to ensure gems are installed correctly
+
+      - name: Verify appraisal installation
+        run: |
+          bundle exec which appraisal
+          bundle exec appraisal --version
+
       - name: Build site
-        run: bundle exec appraisal jekyll build --future
+        run: |
+          bundle exec appraisal jekyll build --future
