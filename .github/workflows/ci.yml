@@ -15,31 +15,17 @@
 #           jekyll/builder:$JEKYLL_VERSION /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
 
 name: Beautiful Jekyll CI
-
 on: [push, pull_request]
-
 jobs:
   build:
     name: Build Jekyll
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Docker Build Environment
-        run: |
-          export JEKYLL_VERSION=3.8
-          docker pull jekyll/builder:$JEKYLL_VERSION  # Ensure you're using the latest image
-
-      - name: Build the site in the jekyll/builder container
-        run: |
-          docker run \
-          -v ${{ github.workspace }}:/srv/jekyll \
-          -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-          -e PAGES_REPO_NWO=${{ github.repository }} \
-          jekyll/builder:$JEKYLL_VERSION /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
-
-      - name: Verify Build
-        run: |
-          ls -la _site  # Verify build output
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+      - name: Install dependencies
+        run: bundle install && bundle exec appraisal install
+      - name: Build site
+        run: bundle exec appraisal jekyll build --future
