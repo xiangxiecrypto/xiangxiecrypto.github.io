@@ -12,7 +12,7 @@ usemathjax: true
 # Preserving Reality: The Crucial Role of Attestation in Anti-FakeAI.
 **TL;DR**: As artificial intelligence (AI) continues to advance, its ability to simulate the real world becomes incredibly powerful. However, this progress also brings about the rise of FakeAI, which has the potential to blur the lines between simulated and real-world content, leading to confusion for individuals. Cryptography emerges as the primary defense against this threat, with attestation serving as a crucial mechanism to ensure content authenticity and validate human involvement. This article provides an in-depth exploration of attestation, including its definitions, challenges, and proposed solutions.
 
-## 1. Why Attesttation: Safeguarding Against AI Simulations
+## 1. Why Attestation: Safeguarding Against AI Simulations
 As AI continues to evolve, its ability to simulate the real world with unprecedented accuracy raises profound concerns. While AI's capabilities hold promise for various applications, they also introduce the risk of blurring the lines between the real and simulated worlds. In this era of FakeAI, where synthetic content can appear indistinguishable from reality, the importance of attestation emerges as a critical safeguard against potential deception and manipulation.
 
 Attestation revolves around verifying the authenticity and integrity of information, particularly concerning its source. It acts as a mechanism to validate the origin and trustworthiness of data. In the context of combating AI simulations, attestation plays a pivotal role in preserving the distinction between the real and simulated worlds.
@@ -26,7 +26,7 @@ Upon encountering attestation for the first time, people often wonder, "What exa
 
 **Attestation**, refers to the process of verifying the authenticity or integrity of information, **typically involving the verification of the source or origin of data, software, or hardware.** Attestation ensures that the entity providing the information is genuine and has not been tampered with or compromised.
 
-**Attestation revolves around verifying the source of data, typically tied to an attester that furnishes the attestation. Conversely, proof encompasses a broader concept, centering on general statements and claims. It's essential to recognize that asserting the source of data is itself a claim.**
+**Attestation revolves around verifying the source of data, typically tied to an attestor that furnishes the attestation. Conversely, proof encompasses a broader concept, centering on general statements and claims. It's essential to recognize that asserting the source of data is itself a claim.**
 
 
 **An example of proof.** In the blockchain, a simple example of a proof is when a user, owning the matching private key of an address, signs a transaction. This signed transaction serves as a "proof" to demonstrate ownership and the ability to spend the assets associated with that address.
