@@ -49,15 +49,11 @@ jobs:
       - name: Install dependencies
         run: |
           bundle install
-          bundle exec appraisal install
-        env:
-          BUNDLE_PATH: vendor/bundle  # Use vendor/bundle to ensure gems are installed correctly
+          # Remove appraisal install (no longer needed)
+          # bundle exec appraisal install
 
-      - name: Verify appraisal installation
-        run: |
-          bundle exec which appraisal
-          bundle exec appraisal --version
+      - name: Install sassc
+        run: bundle install sassc
 
       - name: Build site
-        run: |
-          bundle exec appraisal jekyll build --future
+        run: bundle exec jekyll build --future
