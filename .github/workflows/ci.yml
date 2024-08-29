@@ -52,8 +52,5 @@ jobs:
           # Remove appraisal install (no longer needed)
           # bundle exec appraisal install
 
-      - name: Install sassc
-        run: bundle install sassc
-
       - name: Build site
         run: bundle exec jekyll build --future
