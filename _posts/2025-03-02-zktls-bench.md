@@ -119,7 +119,7 @@ We provide performance metrics for several representative environments.
 | 1024                   | 61,222                     | 75,437                     | 21       |35|49| 148            |
 | 2048                   | 61,356                     | 88,940                     | 23       |39|53| 148             |
 
-##### Summary
+\newline
 1. Both Primus and TLS Notary have implemented MPC-TLS protocols for TLS 1.2, and both are memory-efficient across different platforms. In both implementations, the browser runtime is approximately **2x** slower than native executions.
 2. Under these metrics, Primus is approximately **10x** faster than TLS Notary in total runtime across different platforms. Primus maintains a stable runtime regardless of response size, whereas TLS Notary experiences an increase in both download size and runtime as the response size grows—though the variation remains relatively small.
 3. The primary reason for the benchmark results above is likely Primus’s use of QuickSilver, optimized circuits, and an efficient Garbled Circuit (GC) implementation. **Notably, the TLS Notary team is also integrating QuickSilver with support from the Primus team**. Rough estimates suggest that adopting QuickSilver will significantly reduce download size and lower the computation overhead from approximately 3GC (running GC three times) to 2GC.
