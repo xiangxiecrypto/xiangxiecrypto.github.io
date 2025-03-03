@@ -10,15 +10,11 @@ author: Xiang Xie, Xiao Wang
 usemathjax: true
 ---
 # Unearthing the Reality of zkTLS: A Benchmarking and Cryptanalysis Report
-
 **TL;DR** This article provides an open-source benchmark framework for existing open-source zkTLS libraries across various platforms and network conditions. It finds that the [garble-then-prove](https://eprint.iacr.org/2023/964) system proposed by [Primus](https://primuslabs.xyz/) is up to an order of magnitude faster than other MPC-TLS solutions. Additionally, Primus’s [QuickSilver](https://eprint.iacr.org/2021/076)-based Proxy-TLS protocol is up to 30x faster than alternatives. We welcome PR from other teams to join the [open-source benchmark](https://github.com/primus-labs/zktls-bench/tree/main) effort. Additionally, we also point out a security flaw in some Proxy-TLS implementations, which might allow malicious clients to prove false statements in certain cases. We have conducted the necessary responsible disclosure to relevant teams and want to clarify that we have not performed an actual attack on their code.
-
-
 
 zkTLS, also known as web proofs, is a cryptographic protocol that ensures the authenticity and privacy of the data transferred over the Transport Layer Security (TLS) protocol, such as in all HTTPS-based web applications. zkTLS opens up possibilities for bringing Web2 data to Web3 with verifiability, while preserving privacy.
 
 ## An Overview of TLS
-
 Before diving into the detailed protocol of zkTLS, it’s useful to first review the high-level flow of TLS, as this will help us understand the differences of zkTLS approaches.
 
 The TLS protocol involves two parties: the Client and the Data Source (which we'll refer to as the Server for consistency with zkTLS). TLS operates in two main phases: the Handshake phase and the Record phase.
@@ -29,6 +25,7 @@ In the Handshake phase, the Client and the Data Source negotiate a shared secret
 To generate these session keys, the Key Derivation Function (KDF) is employed. The KDF takes the pre-master secret (`pms`) and other public information (such as the client and server random values) to derive the session keys. This process is typically accomplished using a series of HMAC functions.
 
 Formally, the session keys can be derived as follows:
+
 $$\mathsf{keys}\leftarrow \mathsf{KDF}(\mathsf{pms},\mathsf{public_info})$$
 
 We refer the details to [RFC 5246](https://datatracker.ietf.org/doc/html/rfc5246) and [RFC 8446](https://datatracker.ietf.org/doc/html/rfc8446).
@@ -37,6 +34,7 @@ We refer the details to [RFC 5246](https://datatracker.ietf.org/doc/html/rfc5246
 In the Record phase, the Client and Data Source use session keys to encrypt and decrypt messages. Most zkTLS protocols use AES-GCM for data transfer. Below is a high-level overview of AES-GCM.
 
 Given a key $\mathsf{K}$ and messages $\mathsf{(m_0,...m_\ell)}$, where each $m_i$ is 16 bytes (assuming AES-128 is used), the ciphertext is of the form
+
 $$\mathsf{AES(K,ctr_0)}\oplus m_0~,...,~\mathsf{AES(K,ctr_\ell)}\oplus m_\ell~,~ \tau$$
 
 Here $\mathsf{ctr}_i$ are counters and $\tau$ is a tag computed from the previous ciphertexts and the $\mathsf{K}$. When decrypting the ciphertext with the key $\mathsf{K}$, the system first checks $\tau$ and then decrypts to recover $\mathsf{(m_0,...,m_\ell)}$. We refer the details to [RFC 5288](https://datatracker.ietf.org/doc/html/rfc5288).
