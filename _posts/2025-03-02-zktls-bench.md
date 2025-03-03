@@ -14,6 +14,7 @@ usemathjax: true
 
 zkTLS, also known as web proofs, is a cryptographic protocol that ensures the authenticity and privacy of the data transferred over the Transport Layer Security (TLS) protocol, such as in all HTTPS-based web applications. zkTLS opens up possibilities for bringing Web2 data to Web3 with verifiability, while preserving privacy.
 
+$s_i$
 ## An Overview of TLS
 Before diving into the detailed protocol of zkTLS, it’s useful to first review the high-level flow of TLS, as this will help us understand the differences of zkTLS approaches.
 
@@ -119,7 +120,8 @@ We provide performance metrics for several representative environments.
 | 1024                   | 61,222                     | 75,437                     | 21       |35|49| 148            |
 | 2048                   | 61,356                     | 88,940                     | 23       |39|53| 148             |
 
-\newline
+
+
 1. Both Primus and TLS Notary have implemented MPC-TLS protocols for TLS 1.2, and both are memory-efficient across different platforms. In both implementations, the browser runtime is approximately **2x** slower than native executions.
 2. Under these metrics, Primus is approximately **10x** faster than TLS Notary in total runtime across different platforms. Primus maintains a stable runtime regardless of response size, whereas TLS Notary experiences an increase in both download size and runtime as the response size grows—though the variation remains relatively small.
 3. The primary reason for the benchmark results above is likely Primus’s use of QuickSilver, optimized circuits, and an efficient Garbled Circuit (GC) implementation. **Notably, the TLS Notary team is also integrating QuickSilver with support from the Primus team**. Rough estimates suggest that adopting QuickSilver will significantly reduce download size and lower the computation overhead from approximately 3GC (running GC three times) to 2GC.
@@ -156,7 +158,7 @@ In Proxy-TLS solutions, to simplify benchmarking and ensure fairness as much as 
 | 2048                   | 65                     | 16                    | 76        |119|390 |1,412             |
 
 
-##### Summary
+
 1. Primus implements Option 1 in Proxy-TLS for TLS 1.2, while Pluto adopts Option 1 for TLS 1.3 using the ChaCha20-Poly1305 cipher suite, primarily because ChaCha20 is more compatible with their IVC system. Reclaim, on the other hand, implements Option 2 for both TLS 1.2 and TLS 1.3. 
 2. The total communication size of Reclaim and Pluto is nearly identical, with both being up to **18x** smaller than Primus—as expected given their use of zkSNARKs. 
 3. The total runtime of Primus is **5x** to **30x** faster than Reclaim across different platforms. Additionally, Primus consumes **3x** to **5x** less memory, though both remain lightweight and sufficient for most applications. Pluto, however, is significantly slower than both Primus and Reclaim—over **90×** slower than Primus—with substantially higher memory consumption. This is due to its use of IVC, which is highly computationally intensive.
