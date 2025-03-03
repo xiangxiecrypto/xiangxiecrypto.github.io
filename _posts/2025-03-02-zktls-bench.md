@@ -5,7 +5,7 @@ title: zkTLS Benchmark
 # cover-img: /assets/img/path.jpg
 # thumbnail-img: /assets/img/thumb.png
 # share-img: /assets/img/path.jpg
-tags: [ZK-TLS]
+tags: [zkTLS, Benchmark]
 author: Xiang Xie, Xiao Wang
 usemathjax: true
 ---
@@ -26,7 +26,7 @@ To generate these session keys, the Key Derivation Function (KDF) is employed. T
 
 Formally, the session keys can be derived as follows:
 
-$$\mathsf{keys}\leftarrow \mathsf{KDF}(\mathsf{pms},\mathsf{public_info})$$
+$\mathsf{keys}\leftarrow \mathsf{KDF}(\mathsf{pms},\mathsf{public_info})$
 
 We refer the details to [RFC 5246](https://datatracker.ietf.org/doc/html/rfc5246) and [RFC 8446](https://datatracker.ietf.org/doc/html/rfc8446).
 
@@ -113,7 +113,8 @@ We provide performance metrics for several representative environments.
 
 
 #### Lib: TLS Notary （TLS 1.2）
-| Response Size (Bytes) | Uploaded Size (KBytes) | Downloaded Size (KBytes) | Native(x86) Runtime (s) |Native(arm) Runtime (s) |Browser Runtime (s) |Memory (MBytes)|
+
+| Response Size (Bytes) | Uploaded Size (KBytes) | Downloaded Size (KBytes) | Native(x86) Runtime (s) | Native(arm) Runtime (s) |Browser Runtime (s) |Memory (MBytes)|
 | ----------------------| ----------------------- | ------------------------ | ----------- |---|--| ---------------- |
 | 16                   | 61,089                     | 62,144                     | 20        |32|47| 147             |
 | 256                   | 61,121                     | 65,309                     | 20       |33|48| 148             |
@@ -138,6 +139,7 @@ In Proxy-TLS solutions, to simplify benchmarking and ensure fairness as much as 
 
 
 #### Lib: Reclaim （TLS 1.2/1.3）
+
 | Response Size (Bytes) | Uploaded Size (1.2/1.3 KBytes) | Downloaded Size (1.2/1.3 KBytes) | Native(x86) Runtime (1.2/1.3 s) |Native(arm) Runtime (1.2/1.3 s)  |Browser  Runtime (1.2/1.3 s) |Memory (MBytes)|
 | ----------------------| ----------------------- | ------------------------ | ----------- |---|--| ---------------- |
 | 16                   | 32/23                     | 31/22                    | 4.09/3.62        |8.79/8.16|13.88/13.05| 356             |
