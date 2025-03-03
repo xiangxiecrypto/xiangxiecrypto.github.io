@@ -48,7 +48,6 @@ The two main approaches to zkTLS in the industry are **MPC-TLS** and **Proxy-TLS
 In the MPC-TLS approach, the attestor and client run a two-party computation (2PC) protocol to simulate the client side of the TLS handshake. This means the client does not receive the entire session key after the Handshake Phase. Only after the attestor receives the response ciphertexts does the attestor send the secret key shares to the client, enabling the client to decrypt all the ciphertexts.
 
 The high-level flow of MPC-TLS works as follows.
-
 1. The Client and Attestor run 2PC protocols in the Handshake phase. At the end of this step, the Client and Attestor hold key shares of the session keys. The main part of this step is running a 2PC protocol for the KDF function.
 2. The Client and Attestor run another 2PC protocol to compute the ciphertext of the request, which includes computing the AES function and the tag.
 3. The Client receives the response ciphertext from the Data Source and forwards it to the Attestor.
@@ -93,7 +92,6 @@ We benchmark existing open-source zkTLS core libraries, including [Primus](https
 To simulate real-world scenarios—since most applications access websites via browsers, which require sending cookies over TLS—we set the request size to either 1KB or 2KB. The response size is varied from 16 Bytes to 2KB. It’s important to note that actual performance may vary depending on network and platform configurations.
 
 We provide performance metrics for several representative environments.
-
 - Bandwidth : 200 Mbps
 - Latency : 10 ms
 - Request size: 2 KBytes
